@@ -1,0 +1,73 @@
+\documentclass[13pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{enumerate}
+\usepackage[margin=0.5in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{tgbonum}
+\usepackage{changepage}
+
+%\renewcommand{\thesubsection}{\thesection.\alph{subsection}}
+%\renewcommand{\thesubsubsection}{\thesubsection.\roman{subsubsection}.}
+
+\newenvironment{ind}
+  {\adjustwidth{2.5em}{0pt}}
+  {\endadjustwidth}
+
+\title{UoNSU Soctor Who}
+\date{}
+
+\begin{document}
+
+\maketitle
+
+\section{Name}
+\begin{ind}
+\input{name}
+\end{ind}
+
+\section{Aims and Objectives}
+\begin{ind}
+\input{aims-and-objectives}
+\end{ind}
+
+\section{Membership}
+\begin{ind}
+\input{membership}
+\end{ind}
+
+\section{Committee}
+\begin{ind}
+\input{committee}
+\end{ind}
+
+\section{Committee Meetings}
+\begin{ind}
+\input{committee-meetings}
+\end{ind}
+
+\section{General Meetings}
+\begin{ind}
+\input{general-meetings}
+\end{ind}
+
+\section{Committee Member Removal Procedure}
+\begin{ind}
+\input{vonc}
+\end{ind}
+
+\section{Finance}
+\begin{ind}
+\input{finance}
+\end{ind}
+
+\section{External Organisations}
+\begin{ind}
+\input{external-organisations}
+\end{ind}
+
+\section{Constitution}
+\begin{ind}
+\input{constitution}
+\end{ind}
+
+\end{document}
