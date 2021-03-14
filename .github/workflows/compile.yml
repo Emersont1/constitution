@@ -1,0 +1,34 @@
+name: CI
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: LaTeX compilation
+        uses: dante-ev/latex-action@v0.2.0
+        with:
+          # The root LaTeX file to be compiled
+          root_file: main.tex
+          # The working directory for the latex compiler to be invoked
+          # working_directory: # optional
+          # LaTeX engine to be used
+          # compiler: # optional, default is latexmk
+          # Extra arguments to be passed to the latex compiler
+          # args: # optional, default is -pdf -latexoption=-file-line-error -latexoption=-interaction=nonstopmode
+          # Install extra packages by apt-get
+          # extra_system_packages: # optional 
+      - uses: actions/upload-artifact@v2
+        with:
+          name: constitution
+          path: main.pdf
